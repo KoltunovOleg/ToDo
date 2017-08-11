@@ -1,0 +1,636 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>To Do</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+<link href="./css/main.css" rel="stylesheet"></head>
+
+<body>
+
+  <input type="checkbox" id="nav-toggle"  hidden>
+
+  <nav class="nav">
+
+    <label for="nav-toggle" class="nav-toggle mdi mdi mdi-menu" onclick>
+      <i class="mdi mdi-arrow-left"></i>
+    </label>
+    <div class="wrapper-logo">
+      <h2 class="logo">
+        <a href="#">To Do</a>
+      </h2>
+    </div>
+    <ul>
+      <li><a href="#1"><i class="mdi mdi-view-dashboard"></i><span>Project 1</span></a></li>
+      <li class="current"><a href="#2"><i class="mdi mdi-account-multiple"></i><span>Project 2</span></a></li>
+      <li><a href="#3"><i class="mdi mdi-folder"></i><span>Project 3</span></a></li>
+      <li><a href="#4"><i class="mdi mdi-account-box-outline"></i><span>Project 4</span></a></li>
+      <li><a href="#5"><i class="mdi mdi-file-document"></i><span>Project 5</span></a></li>
+    </ul>
+  </nav>
+  <header id="header">
+    <div class="title">Do list</div>
+    <form class="search">
+      <input type="search" name="" value="" placeholder="Search">
+      <i class="mdi mdi-magnify" aria-hidden="true"></i>
+    </form>
+    <div class="bell">
+      <i class="mdi mdi-bell mdi-inactive"></i>
+      <span class="bell-number">2</span>
+    </div>
+  <div class="select-menu">
+    <div class="selected-item" style="background-image: url(./img/face-1.png);"></div>
+    <i class="mdi mdi-apple-keyboard-control mdi-rotate-180 arrow"></i>
+  </div>
+  </header>
+  <nav class="nav-md">
+
+    <label for="nav-toggle" class="nav-toggle mdi mdi mdi-menu" onclick>
+      <i class="mdi mdi-arrow-left"></i>
+    </label>
+    <ul>
+      <li class="current"><a href="#1"><span>Project 1</span></a></li>
+      <li><a href="#2"><span>Project 2</span></a></li>
+      <li><a href="#3"><span>Project 3</span></a></li>
+      <li><a href="#4"><span>Project 4</span></a></li>
+      <li><a href="#5"><span>Project 5</span></a></li>
+    </ul>
+  </nav>
+  <main id="main" role="main">
+    <div class="holder">
+      <ul class="holder-list">
+        <li class="holder-list_item">
+          <header>
+            Приоритет 1
+            <button type="button" class="mdi mdi-plus"></button>
+            <button type="button" class="mdi mdi-dots-vertical"></button>
+          </header>
+          <form class="form-create">
+            <input class="card-create" type="text" name="" placeholder="Enter name of new card..." value="">
+            <i class="form-create_check mdi mdi-check mdi-inactive"></i>
+            <i class="form-create_cencel mdi mdi-plus mdi-rotate-45 mdi-inactive"></i>
+          </form>
+          <ul>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-red"></span>
+                    <span class="indicator indicator-orange"></span>
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/3</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">14</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">8 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator box-full">
+                    <span class="indicator indicator-long full"></span>
+                    <span class="mdi mdi-checkbox-marked-circle mdi-inactive"></span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">1</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator empty-indicate">
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long full_2_5"></span>
+                    <span class="indicator-count">2/5</span>
+                  </div>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/2</span>
+                  </div>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/4</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">5</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">3 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </li>
+        <li class="holder-list_item">
+          <header>
+            Приоритет 2
+            <button type="button" class="mdi mdi-plus"></button>
+            <button type="button" class="mdi mdi-dots-vertical"></button>
+          </header>
+          <form class="form-create">
+            <input class="card-create" type="text" name="" placeholder="Enter name of new card..." value="">
+            <i class="form-create_check mdi mdi-check mdi-inactive"></i>
+            <i class="form-create_cencel mdi mdi-plus mdi-rotate-45 mdi-inactive"></i>
+          </form>
+          <ul>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-orange"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li class="counter" ><span class="indicator-count">+25</span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/3</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">7</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">1 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator box-full">
+                    <span class="indicator indicator-long full"></span>
+                    <span class="mdi mdi-checkbox-marked-circle mdi-inactive"></span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">7</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">15 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </li>
+        <li class="holder-list_item">
+          <header>
+            Приоритет 3
+            <button type="button" class="mdi mdi-plus"></button>
+            <button type="button" class="mdi mdi-dots-vertical"></button>
+          </header>
+          <form class="form-create">
+            <input class="card-create" type="text" name="" placeholder="Enter name of new card..." value="">
+            <i class="form-create_check mdi mdi-check mdi-inactive"></i>
+            <i class="form-create_cencel mdi mdi-plus mdi-rotate-45 mdi-inactive"></i>
+          </form>
+          <ul>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-orange"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li class="counter" ><span class="indicator-count">+8</span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/3</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">2</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">1 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                    <span class="indicator indicator-blue"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <div class="box-indicator_note">
+                      <span class="mdi mdi-checkbox-marked mdi-inactive"></span>
+                      <span class="note">Update links in profile settings</span>
+                    </div>
+                    <div class="box-indicator_note">
+                      <span class="mdi mdi-checkbox-blank-outline mdi-inactive"></span>
+                      <span class="note">The setting icon should be...</span>
+                    </div>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">7</span>
+                  </div>
+                  <div class="box-footer_clip">
+
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </li>
+        <li class="holder-list_item">
+          <header>
+            Приоритет 4
+            <button type="button" class="mdi mdi-plus"></button>
+            <button type="button" class="mdi mdi-dots-vertical"></button>
+          </header>
+          <form class="form-create">
+            <input class="card-create" type="text" name="" placeholder="Enter name of new card..." value="">
+            <i class="form-create_check mdi mdi-check mdi-inactive"></i>
+            <i class="form-create_cencel mdi mdi-plus mdi-rotate-45 mdi-inactive"></i>
+          </form>
+          <ul>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-red"></span>
+                    <span class="indicator indicator-orange"></span>
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/3</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">14</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">8 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator empty-indicate">
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long full_2_5"></span>
+                    <span class="indicator-count">2/5</span>
+                  </div>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/2</span>
+                  </div>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/4</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">5</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">3 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator box-full">
+                    <span class="indicator indicator-long full"></span>
+                    <span class="mdi mdi-checkbox-marked-circle mdi-inactive"></span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">1</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator box-full">
+                    <span class="indicator indicator-long full"></span>
+                    <span class="mdi mdi-checkbox-marked-circle mdi-inactive"></span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">1</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </li>
+        <li class="holder-list_item">
+          <header>
+            Приоритет 5
+            <button type="button" class="mdi mdi-plus"></button>
+            <button type="button" class="mdi mdi-dots-vertical"></button>
+          </header>
+          <form class="form-create">
+            <input class="card-create" type="text" name="" placeholder="Enter name of new card..." value="">
+            <i class="form-create_check mdi mdi-check mdi-inactive"></i>
+            <i class="form-create_cencel mdi mdi-plus mdi-rotate-45 mdi-inactive"></i>
+          </form>
+          <ul>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-orange"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li class="counter" ><span class="indicator-count">+25</span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/3</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">7</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">1 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator box-full">
+                    <span class="indicator indicator-long full"></span>
+                    <span class="mdi mdi-checkbox-marked-circle mdi-inactive"></span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">7</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">15 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </li>
+        <li class="holder-list_item">
+          <header>
+            Приоритет 6
+            <button type="button" class="mdi mdi-plus"></button>
+            <button type="button" class="mdi mdi-dots-vertical"></button>
+          </header>
+          <form class="form-create">
+            <input class="card-create" type="text" name="" placeholder="Enter name of new card..." value="">
+            <i class="form-create_check mdi mdi-check mdi-inactive"></i>
+            <i class="form-create_cencel mdi mdi-plus mdi-rotate-45 mdi-inactive"></i>
+          </form>
+          <ul>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-orange"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-def.png);"></span></li>
+                    <li class="counter" ><span class="indicator-count">+8</span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-long"></span>
+                    <span class="indicator-count">0/3</span>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">2</span>
+                  </div>
+                  <div class="box-footer_clip">
+                    <i class="mdi mdi-paperclip mdi-inactive"></i>
+                    <span class="indicator-count">1 files</span>
+                  </div>
+                </footer>
+              </section>
+            </li>
+            <li>
+              <section class="box">
+                <main>
+                  <div class="box-indicator">
+                    <span class="indicator indicator-green"></span>
+                    <span class="indicator indicator-blue"></span>
+                  </div>
+                  <p class="name">Name name</p>
+                  <ul class="list-profile">
+                    <li><span class="face-profile" style="background-image: url(./img/face-2.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-4.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-5.png);"></span></li>
+                    <li><span class="face-profile" style="background-image: url(./img/face-3.png);"></span></li>
+                  </ul>
+                  <div class="box-indicator">
+                    <div class="box-indicator_note">
+                      <span class="mdi mdi-checkbox-marked mdi-inactive"></span>
+                      <span class="note">Update links in profile settings</span>
+                    </div>
+                    <div class="box-indicator_note">
+                      <span class="mdi mdi-checkbox-blank-outline mdi-inactive"></span>
+                      <span class="note">The setting icon should be...</span>
+                    </div>
+                  </div>
+                </main>
+                <footer class="box-footer">
+                  <div class="box-footer_message">
+                    <i class="mdi mdi-message mdi-inactive"></i>
+                    <span class="indicator-count">7</span>
+                  </div>
+                  <div class="box-footer_clip">
+
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
+  
+<script type="text/javascript" src="js/main.js"></script></body>
+
+</html>

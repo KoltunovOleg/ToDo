@@ -1,0 +1,752 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Rubik&subset=cyrillic');
+
+
+* {
+    box-sizing: border-box;
+}
+
+/**
+ * Максимальная высота базового контейнера
+ */
+html {
+    font-size: 100%;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;;
+}
+
+body {
+    color: #333;
+    font: 1em 'Roboto', sans-serif;
+    background-color: #f2f5f9;
+    overflow-y: hidden;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2 {
+    margin-bottom: 22px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+::-webkit-scrollbar {
+    width: .65em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(217, 217, 217, 0.75);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(170, 170, 170, 0.6);
+    border-radius: 5px;
+    box-shadow: inset 0.05em 0.05em 0 rgba(0, 0, 0, 0.1), inset 0 -0.05em 0 rgba(0, 0, 0, 0.07);
+}
+
+::-webkit-input-placeholder {color:#919cb1;}
+::-moz-placeholder          {color:#919cb1;}/* Firefox 19+ */
+:-moz-placeholder           {color:#919cb1;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#919cb1;}
+
+// Remove border and padding in Firefox
+::-moz-focus-outer, ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*---------------------------------------------
+----------HEADER-------------------------------
+------------------------------------------------*/
+#header{
+  display: flex;
+  justify-content: flex-end;
+  height: 67px;
+  padding: 12px 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #d9dce3;
+  .bell{
+    position: relative;
+    margin: 0 26px 0 0;
+    padding: 5px 0 0;
+  }
+  .mdi-bell{
+    font-size: 24px;
+    color: #5e6a80;
+  }
+  .bell-number{
+    position: absolute;
+    display: inline-block;
+    top: 7px;
+    right: -3px;
+    width: 14px;
+    height: 13px;
+    border-radius: 1px;
+    font-size: 10px;
+    text-align: center;
+    background-color: #e2715c;
+    color: #fff;
+  }
+  .title{
+    position: absolute;
+    top: 27px;
+    left: 126px;
+    font-size: 16px;
+    color: #424a59;
+  }
+}
+.search{
+  position: relative;
+  i{
+    position: absolute;
+    color: #5e6a80;
+    font-size: 25px;
+    top: 15%;
+    right: 10%;
+  }
+  input[type=search]{
+    width: 318px;
+    height: 39px;
+    border: none;
+    border: 1px solid #a0c7fd;
+    padding: 0 35px 0 15px;
+    margin: 1px 27px 0;
+    font-size: 14px;
+  }
+}
+.select-menu{
+  position: relative;
+  margin-right: 70px;
+  margin-top: 7px;
+  &:hover{
+    cursor: pointer;
+  }
+  .arrow{
+    position: absolute;
+    top: 5px;
+    right: -20px;
+  }
+}
+.selected-item{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-position: 30% 80%;
+  margin-right: 2px;
+
+}
+/*----------------------------------------------
+-------------------MAIN--------------------------
+------------------------------------------------*/
+#main {
+  margin: 0 auto;
+  background-color: #f2f5f9;
+  font-weight: 500;
+  color: #424a59;
+}
+
+.holder {
+  margin: 0 0 0 271px;
+  -webkit-transition: -webkit-transform .3s;
+  -moz-transition: -moz-transform .3s;
+  transition: transform .3s;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: calc(100vh - 67px);
+  button{
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 20px;
+    outline: 0;
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    font-size: 22px;
+    &:first-child{
+      right: 50px;
+    }
+  }
+}
+.holder-list{
+  display: flex;
+  text-align: left;
+}
+.holder-list_item{
+  padding: 30px 0 0 0;
+  width: 264px;
+  min-width: 264px;
+  margin: 0 14px;
+  height: calc(100vh - 70px);
+  &:hover{
+    overflow-x: auto;
+  }
+  header{
+    background-color: #208abe;
+    color: #fff;
+    height: 50px;
+    margin: 0 0 11px 0;
+    padding: 0 0 0 20px;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    position: relative;
+    line-height: 4.4;
+  }
+}
+.form-create{
+  position: relative;
+}
+.card-create{
+  width: 100%;
+  height: 44px;
+  border: none;
+  border: 1px solid #a0c7fd;
+  margin: 0 0 10px 0;
+  padding: 0 15px;
+  font-size: 14px;
+}
+.form-create_check{
+  display: none;
+  position: absolute;
+  color: #87d77e;
+  top: 12px;
+  right: 41px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.form-create_cencel{
+  display: none;
+  position: absolute;
+  color: #de5b5b;
+  top: 12px;
+  right: 14px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.box{
+  background-color: #fff;
+  margin-bottom: 10px;
+  // padding: 15px 0;
+  box-shadow: 0px 1px 3px 0px #e3e6ed;
+  main{
+    border-bottom: 1px solid #e3e6ed;
+    padding: 1.5% 6.8% 2.5% 6%;
+    margin: 0 0 7.5% 0;
+  }
+}
+.name{
+    margin: 0 0 7px;
+    padding: 1.7% 0 0 0;
+  }
+.box-indicator{
+  margin: 0 0 1px 0;
+  .indicator{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    margin: 0 7px 0 0;
+  }
+  &.box-full{
+    margin: 0 0 6px 0;
+  }
+  &.empty-indicate{
+    margin-bottom: 4px;
+  }
+  &:nth-of-type(n+3){
+    margin: 5px 0 0 0;
+  }
+  &:last-of-type:not(:nth-of-type(2)){
+    margin-bottom: 5px;
+  }
+  .indicator-red{
+    background-color: #df5b5b;
+  }
+  .indicator-orange{
+    background-color: #f1c752;
+  }
+  .indicator-green{
+    background-color: #8edc87;
+  }
+  .indicator-blue{
+    background-color: #7db6fd;
+  }
+  .indicator-long{
+    margin: 0 13px 2px 0;
+    width: 184px;
+    background-color: #e7e9ee;
+    &.full:after{
+    z-index: 1;
+    left: 0;
+    position: absolute;
+    content: " ";
+    height: 90%;
+    width: 100%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #8ddc86;
+    }
+    &.full_2_5:after{
+      z-index: 1;
+      left: 0;
+      position: absolute;
+      content: " ";
+      height: 90%;
+      width: 40%;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #8ddc86;
+      }
+  }
+  .indicator-count{
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 2px;
+    color: #a1a7b0;
+  }
+  .mdi-checkbox-marked-circle,
+  .mdi-checkbox-marked{
+    color: #8ddc86;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  .mdi-checkbox-blank-outline{
+    color: #e3e6ed;
+    font-size: 20px;
+  }
+  .box-indicator_note{
+    padding: 1.6% 0 0 0;
+    margin-left: -1px;
+    &:last-of-type{
+      padding-top: .8%;
+      margin-bottom: 6px;
+    }
+  }
+  .note{
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 0 0 4px;
+  }
+}
+.list-profile{
+  display: flex;
+  align-items: center;
+  margin: 0 0 2px 0;
+  li{
+    display: inline-block;
+    margin-right: 6px;
+    &:first-child{
+      margin-right: 27px;
+    }
+    &.counter{
+      margin-left: 11px;
+    }
+    .indicator-count{
+      display: inline-block;
+      width: 32px;
+      height: 20px;
+      text-align: center;
+      color: #8edc87;
+      border: 1px solid #8edc87;
+      border-radius: 10px;
+      font-size: 12px;
+      margin-bottom: 4px;
+      line-height: 1.8;
+    }
+  }
+}
+.face-profile{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+
+}
+.box-footer{
+  padding: 0 22px 14px;
+  div{
+    display: inline-block;
+    margin: 0 0 0 1px;
+  }
+  .box-footer_clip{
+    vertical-align: top;
+    .indicator-count{
+      margin-left: 5px;
+    }
+  }
+  .box-footer_message{
+    min-width: 40px;
+   }
+  .indicator-count{
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 0 0 2px;
+    vertical-align: top;;
+  }
+  .mdi-message{
+    font-size: 19px;
+    color: #7db6fd;
+    vertical-align: top;
+  }
+  .mdi-paperclip{
+    color: #e16363;
+    margin: 0 0 0 6px;
+    vertical-align: top;
+  }
+}
+/*------------------------------------------------
+---------------MENU-------------------------------
+-------------------------------------------------*/
+.nav {
+    /*  ширна произвольная, не стесняйтесь экспериментировать */
+    width: 255px;
+    min-width: 255px;
+    /* фиксируем и выставляем высоту панели на максимум */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    /* сдвигаем (прячем) панель относительно левого края страницы */
+    // left: -200px;
+    /* плавный переход смещения панели */
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s;
+    /* определяем цвет фона панели */
+    background: #2d323e;
+    /* поверх других элементов */
+    z-index: 2000;
+}
+
+.nav-toggle {
+    /* абсолютно позиционируем */
+    position: absolute;
+    /* относительно левого края панели */
+    right: 19px;
+    /* отступ от верхнего края панели */
+    top: 1.2em;
+    /* определяем цвет фона переключателя
+     * чаще вчего в соответствии с цветом фона панели
+    */
+    background: transparent;
+    /* цвет текста */
+    color: #dadada;
+    /* вид курсора */
+    cursor: pointer;
+    /* размер шрифта */
+    font-size: 1.2em;
+    line-height: 1;
+    /* всегда поверх других элементов страницы */
+    z-index: 2001;
+    /* анимируем цвет текста при наведении */
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+    i{
+      position: absolute;
+      top: 3px;
+      right: 14px;
+      font-size: 12px;
+    }
+}
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+
+
+.wrapper-logo{
+  background-color: #373c47;
+  border-bottom: 1px solid #292d38;
+}
+
+.nav h2 {
+  width: 90%;
+  height: 66px;
+  padding: 0 0 0 21px;
+  margin: 0;
+  opacity: 1;
+   &:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+  }
+  a:active,
+  a:hover,
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
+
+
+
+.nav {
+  > ul{
+    > li {
+      opacity: 1;
+      padding: 10px 0 12px 23px;
+      &.current{
+        background-color: #292d38;
+      }
+    }
+  }
+}
+
+
+.nav > ul > li > a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-weight: 300;
+    font-size: 14px;
+    color: #aeb0b4;
+    width: 100%;
+    text-decoration: none;;
+    .mdi-view-dashboard,
+    .mdi-account-multiple,
+    .mdi-folder,
+    .mdi-account-box-outline,
+    .mdi-file-document{
+      font-size: 22px;
+      vertical-align: middle;
+    }
+    span{
+      vertical-align: middle;
+      margin: 0 0 0 25px;
+    }
+}
+
+.nav-md{
+  display: none;
+  flex-direction: column;
+  height: 38px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: #2d323e;
+  &::-webkit-scrollbar {
+    display: none;
+}
+  ul{
+    display: flex;
+    padding-left: 60px;
+    
+    li{
+      display: inline-block;
+      min-width: 103px;
+      padding-bottom: 20px;
+      padding-left: 12px;
+      &.current{
+        border-bottom: 3px solid #e2715c;
+        a{
+          color: #aeb0b4;
+        }
+      }
+    }
+    a:active,
+    a:hover,
+    a{
+      color: #5e6a80;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 1440px) {
+    .nav{
+      width: 54px;
+      min-width: 54px;
+    }
+    .holder{
+      margin-left: 71px;
+    }
+    .nav {
+      > ul {
+        > li{
+          margin-left: -8px;
+          > a {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  .nav h2 {
+    a{
+      display: none;
+    }
+  }
+  .nav-toggle{
+      i{
+        display: none;
+      }
+    }
+    
+    [id='nav-toggle']:checked ~ main > .holder {
+    margin-left: 271px;
+}
+}
+
+@media screen and (max-width: 1024px) {
+  #header{
+    background-color: #2d323e;
+    border-bottom: none;
+    .title{
+      color: #aeb0b4;
+      left: 71px;
+      top: 20px;
+    }
+    .bell{
+    padding: 5px 0 0 0;
+    margin-right: 5px; 
+    }
+    .bell-number{
+      top: 5px;
+    }
+    .search i {
+      top: 15%;
+      right: 4%;
+    }
+  }
+    .holder{
+      margin-left: 20px;
+      height: calc(100vh - 105px);
+    }
+    .select-menu{
+      display: none;
+    }
+    .nav {
+      display: none;
+    }
+    .nav-md {
+      display: flex;
+      .nav-toggle{
+        right: 0;
+        left: 23px;
+        top: 20px;
+      }
+    }
+    .search input[type=search]{
+      opacity: 0;
+    }
+    .nav-toggle {
+      i {
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        right: 0;
+        left: -7px;
+      }
+    }
+    [id='nav-toggle']:checked ~ main > .holder {
+    margin-left: 20px;
+}
+}
+
+@media screen and (max-width: 360px) {
+    #main{
+      overflow: hidden;
+    }
+    .holder{
+      margin-left: 0;
+      overflow: auto;
+      overflow-x: hidden;
+      margin-right: -11px;
+      height: calc(100vh - 120px);
+      background-color: #eeeeee;
+      button{
+        font-size: 24px;
+        top:19px;
+        right: 30px;
+        &:first-child {
+          right: 56px;
+        }
+      }
+    }
+    .holder-list{
+      flex-direction: column;
+    }
+    .holder-list_item{
+      margin: 0;
+      min-width: 100%;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      &::last-of-type{
+        padding-bottom: 10px;
+      }
+      header{
+        background-color: transparent;
+        color: #424a59;
+        height: 67px;
+        margin: 0 0 .6% 0;
+        font-size: 16px;
+        line-height: 4.2;
+      }
+    }
+    .box main {
+      margin: 0 0 5% 0;
+    }
+    .name {
+      padding: 1% 0 0 0;
+    }
+    .box-indicator.box-full {
+      margin: 0 0 3px 0;
+    }
+    .box-footer {
+      padding-left: 25px;
+    }
+    .box-indicator {
+      .indicator-long {
+        margin: 0 10px 2px 0;
+        width: 280px;
+      }
+    }
+    .indicator-long.full_2_5:after {
+      width: 25%;
+    }
+    .card-create{
+      padding: 0 20px;
+    }
+    .form-create_cencel{
+      right: 21px;
+    }
+    .form-create_check{
+      right: 47px;
+    }
+    
+    
+    [id='nav-toggle']:checked ~ main > .holder {
+    margin-left: 0px;
+}
+}
